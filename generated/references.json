@@ -9873,7 +9873,7 @@
             "pulse_username": {
               "type": "string"
             },
-            "rate_limit_max_requests": {
+            "auth_rate_limit_max_requests": {
               "type": "number"
             },
             "read_db_url": {
@@ -9917,7 +9917,7 @@
           "required": [
             "procs",
             "public_url",
-            "rate_limit_max_requests",
+            "auth_rate_limit_max_requests",
             "additional_allowed_cors_origin",
             "taskcluster_client_id",
             "taskcluster_access_token",
