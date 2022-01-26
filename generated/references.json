@@ -9762,6 +9762,9 @@
             "additional_allowed_cors_origin": {
               "type": "string"
             },
+            "auth_rate_limit_max_requests": {
+              "type": "number"
+            },
             "azure_crypto_key": {
               "type": "string"
             },
@@ -9872,9 +9875,6 @@
             },
             "pulse_username": {
               "type": "string"
-            },
-            "auth_rate_limit_max_requests": {
-              "type": "number"
             },
             "read_db_url": {
               "type": "string"
