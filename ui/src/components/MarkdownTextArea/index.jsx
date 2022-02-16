@@ -4,14 +4,15 @@ import { object, string, func, number } from 'prop-types';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import TextField from '@material-ui/core/TextField';
-import { alpha, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import Markdown from '../Markdown';
 
 @withStyles(theme => {
   const borderColor =
     theme.palette.type === 'light'
-      ? alpha(theme.palette.common.black, 0.23)
-      : alpha(theme.palette.common.white, 0.23);
+      ? fade(theme.palette.common.black, 0.23)
+      : fade(theme.palette.common.white, 0.23);
 
   return {
     tab: {

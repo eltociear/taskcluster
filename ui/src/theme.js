@@ -1,5 +1,5 @@
-import { alpha, createTheme } from '@material-ui/core/styles';
-import { lighten } from '@material-ui/core/styles/colorManipulator';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { fade, lighten } from '@material-ui/core/styles/colorManipulator';
 import transitions from '@material-ui/core/styles/transitions';
 import red from '@material-ui/core/colors/red';
 import amber from '@material-ui/core/colors/amber';
@@ -34,7 +34,7 @@ const specific = {
   light: purple[200],
   contrastText: THEME.PRIMARY_TEXT_LIGHT,
 };
-const themeOptions = isDarkTheme => {
+const createTheme = isDarkTheme => {
   const primaryMain = isDarkTheme ? THEME.PRIMARY_DARK : THEME.PRIMARY_LIGHT;
   const textPrimary = isDarkTheme
     ? THEME.PRIMARY_TEXT_DARK
@@ -180,7 +180,7 @@ const themeOptions = isDarkTheme => {
       hover: {
         '&:hover, &:focus': {
           textDecoration: 'none',
-          backgroundColor: alpha(textPrimary, 0.08),
+          backgroundColor: fade(textPrimary, 0.08),
           // Reset on touch devices, it doesn't add specificity
           '@media (hover: none)': {
             backgroundColor: 'transparent',
@@ -208,7 +208,7 @@ const themeOptions = isDarkTheme => {
       secondaryIcon: {
         backgroundColor: THEME.SECONDARY,
         '&:hover': {
-          backgroundColor: alpha(THEME.SECONDARY, 0.9),
+          backgroundColor: fade(THEME.SECONDARY, 0.9),
         },
         '& svg': {
           backgroundColor: 'transparent',
@@ -328,7 +328,7 @@ const themeOptions = isDarkTheme => {
         toolbarBtn: {
           '&:hover, &:focus': {
             textDecoration: 'none',
-            backgroundColor: alpha(textPrimary, 0.08),
+            backgroundColor: fade(textPrimary, 0.08),
             // Reset on touch devices, it doesn't add specificity
             '@media (hover: none)': {
               backgroundColor: 'transparent',
@@ -468,9 +468,9 @@ const themeOptions = isDarkTheme => {
   };
 };
 
-const theme = createTheme(themeOptions(true));
+const theme = createMuiTheme(createTheme(true));
 
 export default {
-  lightTheme: createTheme(themeOptions(false)),
+  lightTheme: createMuiTheme(createTheme(false)),
   darkTheme: theme,
 };

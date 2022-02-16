@@ -5,7 +5,8 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import { alpha, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import { ReactGhLikeDiff } from 'react-gh-like-diff';
 import 'react-gh-like-diff/dist/css/diff2html.min.css';
 import { THEME } from '../../utils/constants';
@@ -13,8 +14,8 @@ import { THEME } from '../../utils/constants';
 const styles = withStyles(theme => {
   const borderColor =
     theme.palette.type === 'light'
-      ? alpha(theme.palette.common.black, 0.23)
-      : alpha(theme.palette.common.white, 0.23);
+      ? fade(theme.palette.common.black, 0.23)
+      : fade(theme.palette.common.white, 0.23);
 
   return {
     '@global': {

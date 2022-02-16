@@ -4,7 +4,8 @@ import classNames from 'classnames';
 import parser from 'markdown-it';
 import linkAttributes from 'markdown-it-link-attributes';
 import highlighter from 'markdown-it-highlightjs';
-import { alpha, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import 'highlight.js/styles/atom-one-dark.css';
 
 const markdown = parser({ linkify: true });
@@ -181,7 +182,7 @@ markdown.use(linkAttributes, {
     },
     '& :not(pre) > code': {
       backgroundColor:
-        theme.palette.type === 'dark' ? alpha('#fff', 0.1) : alpha('#000', 0.1),
+        theme.palette.type === 'dark' ? fade('#fff', 0.1) : fade('#000', 0.1),
     },
   },
 }))

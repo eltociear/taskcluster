@@ -43,7 +43,6 @@ module.exports = {
         'react/static-property-placement': 'off',
         // We use @babel/plugin-proposal-class-properties to allow those
         'react/state-in-constructor': 'off',
-        'react/jsx-no-bind': 'off',
       },
     }),
     react({

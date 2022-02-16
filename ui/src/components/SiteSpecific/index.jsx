@@ -1,6 +1,7 @@
 import React from 'react';
 import { arrayOf, string } from 'prop-types';
-import { alpha, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import Paper from '@material-ui/core/Paper';
 import Markdown from '../Markdown';
 import { siteSpecificVariables } from '../../utils/siteSpecific';
@@ -8,7 +9,7 @@ import { siteSpecificVariables } from '../../utils/siteSpecific';
 const styles = withStyles(theme => ({
   root: {
     borderLeft: `5px solid ${theme.palette.specific.dark}`,
-    backgroundColor: alpha(theme.palette.specific.main, 0.2),
+    backgroundColor: fade(theme.palette.specific.main, 0.2),
     padding: `${theme.spacing(1)}px ${theme.spacing(3)}px`,
     margin: `${theme.spacing(3)}px 0`,
     '& a': {

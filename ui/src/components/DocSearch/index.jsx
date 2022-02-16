@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { oneOf, string, arrayOf, shape } from 'prop-types';
-import { alpha, withStyles } from '@material-ui/core/styles';
+import { fade, withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -18,9 +18,9 @@ import { THEME } from '../../utils/constants';
       height: '100%',
     },
     searchRoot: {
-      background: alpha(THEME.PRIMARY_DARK, 0.5),
+      background: fade(THEME.PRIMARY_DARK, 0.5),
       '&:hover': {
-        background: alpha(THEME.PRIMARY_DARK, 0.9),
+        background: fade(THEME.PRIMARY_DARK, 0.9),
       },
       '& .MuiInput-underline:before': {
         borderBottom: 'unset !important',
@@ -29,7 +29,7 @@ import { THEME } from '../../utils/constants';
         fill: theme.palette.common.white,
       },
       '& .mdi-icon': {
-        fill: alpha(theme.palette.common.white, 0.5),
+        fill: fade(theme.palette.common.white, 0.5),
         marginRight: theme.spacing(1),
         height: 35,
       },
@@ -37,9 +37,9 @@ import { THEME } from '../../utils/constants';
     searchInputRoot: {
       paddingLeft: theme.spacing(2),
       paddingRight: theme.spacing(1),
-      color: alpha(THEME.PRIMARY_TEXT_DARK, 0.5),
+      color: fade(THEME.PRIMARY_TEXT_DARK, 0.5),
       '&:focus': {
-        color: alpha(THEME.PRIMARY_TEXT_DARK, 0.9),
+        color: fade(THEME.PRIMARY_TEXT_DARK, 0.9),
       },
     },
     groupItem: {

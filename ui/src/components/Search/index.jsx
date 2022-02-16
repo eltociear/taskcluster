@@ -1,17 +1,18 @@
 import React, { PureComponent } from 'react';
 import { object, func, string, bool } from 'prop-types';
 import classNames from 'classnames';
-import { alpha, withStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
+import { fade } from '@material-ui/core/styles/colorManipulator';
 import FormControl from '@material-ui/core/FormControl';
 import MagnifyIcon from 'mdi-react/MagnifyIcon';
 import { THEME } from '../../utils/constants';
 
 @withStyles(theme => ({
   root: {
-    background: alpha(THEME.PRIMARY_DARK, 0.5),
+    background: fade(THEME.PRIMARY_DARK, 0.5),
     borderRadius: 2,
     '&:hover': {
-      background: alpha(THEME.PRIMARY_DARK, 0.9),
+      background: fade(THEME.PRIMARY_DARK, 0.9),
     },
     '& $input': {
       transition: theme.transitions.create('width'),
@@ -33,7 +34,7 @@ import { THEME } from '../../utils/constants';
     alignItems: 'center',
     justifyContent: 'center',
     '& svg': {
-      fill: alpha(theme.palette.common.white, 0.5),
+      fill: fade(theme.palette.common.white, 0.5),
     },
   },
   input: {
@@ -49,10 +50,10 @@ import { THEME } from '../../utils/constants';
     whiteSpace: 'normal',
     background: 'none',
     margin: 0, // Reset for Safari
-    color: alpha(THEME.PRIMARY_TEXT_DARK, 0.5),
+    color: fade(THEME.PRIMARY_TEXT_DARK, 0.5),
     width: '100%',
     '&:focus': {
-      color: alpha(THEME.PRIMARY_TEXT_DARK, 0.9),
+      color: fade(THEME.PRIMARY_TEXT_DARK, 0.9),
       outline: 0,
     },
   },
